@@ -5034,11 +5034,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CURSURI\\AN 3\\Laboratoare\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
+      "projectUniqueName": "E:\\CURSURI\\AN 3\\git\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
       "projectName": "ClassLibraryNetCore",
-      "projectPath": "E:\\CURSURI\\AN 3\\Laboratoare\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
+      "projectPath": "E:\\CURSURI\\AN 3\\git\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\CURSURI\\AN 3\\Laboratoare\\ClassLibraryNetCore\\obj\\",
+      "outputPath": "E:\\CURSURI\\AN 3\\git\\ClassLibraryNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
