@@ -1,5 +1,0 @@
-E:\CURSURI\AN 3\Laboratoare\Laborator1\bin\Debug\Laborator1.exe.config
-E:\CURSURI\AN 3\Laboratoare\Laborator1\bin\Debug\Laborator1.exe
-E:\CURSURI\AN 3\Laboratoare\Laborator1\bin\Debug\Laborator1.pdb
-E:\CURSURI\AN 3\Laboratoare\Laborator1\obj\Debug\Laborator1.exe
-E:\CURSURI\AN 3\Laboratoare\Laborator1\obj\Debug\Laborator1.pdb
