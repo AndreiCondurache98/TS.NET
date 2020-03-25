@@ -1,0 +1,11 @@
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\ObjectWCF.dll
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\ObjectWCF.pdb
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\PostComment.dll
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\EntityFramework.dll
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\PostComment.pdb
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\PostComment.dll.config
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\bin\Debug\EntityFramework.xml
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\obj\Debug\ObjectWCF.csprojAssemblyReference.cache
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\obj\Debug\ObjectWCF.csproj.CopyComplete
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\obj\Debug\ObjectWCF.dll
+E:\CURSURI\AN 3\git\laborator6\ObjectWCF\obj\Debug\ObjectWCF.pdb

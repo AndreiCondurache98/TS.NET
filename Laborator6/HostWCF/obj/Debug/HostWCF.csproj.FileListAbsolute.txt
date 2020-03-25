@@ -1,0 +1,14 @@
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\HostWCF.exe.config
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\HostWCF.exe
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\HostWCF.pdb
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\ObjectWCF.dll
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\PostComment.dll
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\EntityFramework.dll
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\ObjectWCF.pdb
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\PostComment.pdb
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\PostComment.dll.config
+E:\CURSURI\AN 3\git\laborator6\HostWCF\bin\Debug\EntityFramework.xml
+E:\CURSURI\AN 3\git\laborator6\HostWCF\obj\Debug\HostWCF.csprojAssemblyReference.cache
+E:\CURSURI\AN 3\git\laborator6\HostWCF\obj\Debug\HostWCF.csproj.CopyComplete
+E:\CURSURI\AN 3\git\laborator6\HostWCF\obj\Debug\HostWCF.exe
+E:\CURSURI\AN 3\git\laborator6\HostWCF\obj\Debug\HostWCF.pdb
