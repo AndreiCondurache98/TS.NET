@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AppModelStoreContainer">
+    <EntitySet Name="Photos" EntityType="AppModel.Store.Photos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="People" EntityType="AppModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locations" EntityType="AppModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PhotoPerson" EntityType="AppModel.Store.PhotoPerson" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PhotoPerson_Photo" Association="AppModel.Store.FK_PhotoPerson_Photo">
+      <End Role="Photo" EntitySet="Photos" />
+      <End Role="PhotoPerson" EntitySet="PhotoPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhotoPerson_Person" Association="AppModel.Store.FK_PhotoPerson_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PhotoPerson" EntitySet="PhotoPerson" />
+    </AssociationSet>
+    <AssociationSet Name="LocationPhoto" Association="AppModel.Store.LocationPhoto">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Photo" EntitySet="Photos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Photos">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Name="PhotoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Event" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="FilePath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LocationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhotoPerson">
+    <Key>
+      <PropertyRef Name="Photos_PhotoId" />
+      <PropertyRef Name="People_PersonId" />
+    </Key>
+    <Property Name="Photos_PhotoId" Type="int" Nullable="false" />
+    <Property Name="People_PersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="LocationPhoto">
+    <End Role="Location" Type="AppModel.Store.Locations" Multiplicity="1" />
+    <End Role="Photo" Type="AppModel.Store.Photos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhotoPerson_Photo">
+    <End Role="Photo" Type="AppModel.Store.Photos" Multiplicity="1" />
+    <End Role="PhotoPerson" Type="AppModel.Store.PhotoPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photo">
+        <PropertyRef Name="PhotoId" />
+      </Principal>
+      <Dependent Role="PhotoPerson">
+        <PropertyRef Name="Photos_PhotoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhotoPerson_Person">
+    <End Role="PhotoPerson" Type="AppModel.Store.PhotoPerson" Multiplicity="*" />
+    <End Role="Person" Type="AppModel.Store.People" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhotoPerson">
+        <PropertyRef Name="People_PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AppModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="AppModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Photos" EntityType="AppModel.Photo" />
+          <EntitySet Name="People" EntityType="AppModel.Person" />
+          <AssociationSet Name="PhotoPerson" Association="AppModel.PhotoPerson">
+            <End Role="Photo" EntitySet="Photos" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+          <EntitySet Name="Locations" EntityType="AppModel.Location" />
+          <AssociationSet Name="LocationPhoto" Association="AppModel.LocationPhoto">
+            <End Role="Location" EntitySet="Locations" />
+            <End Role="Photo" EntitySet="Photos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="PhotoId" />
+          </Key>
+          <Property Name="PhotoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="200" />
+          <Property Name="Event" Type="String" Nullable="false" MaxLength="30" />
+          <Property Name="FilePath" Type="String" Nullable="false" />
+          <NavigationProperty Name="People" Relationship="AppModel.PhotoPerson" FromRole="Photo" ToRole="Person" />
+          <NavigationProperty Name="Location" Relationship="AppModel.LocationPhoto" FromRole="Photo" ToRole="Location" />
+          <Property Name="LocationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonId" />
+          </Key>
+          <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="15" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="15" />
+          <NavigationProperty Name="Photos" Relationship="AppModel.PhotoPerson" FromRole="Person" ToRole="Photo" />
+        </EntityType>
+        <Association Name="PhotoPerson">
+          <End Type="AppModel.Photo" Role="Photo" Multiplicity="*" />
+          <End Type="AppModel.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Photos" Relationship="AppModel.LocationPhoto" FromRole="Location" ToRole="Photo" />
+        </EntityType>
+        <Association Name="LocationPhoto">
+          <End Type="AppModel.Location" Role="Location" Multiplicity="1" />
+          <End Type="AppModel.Photo" Role="Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="LocationId" />
+            </Principal>
+            <Dependent Role="Photo">
+              <PropertyRef Name="LocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppModelStoreContainer" CdmEntityContainer="AppModelContainer">
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="IsTypeOf(AppModel.Photo)">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(AppModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="IsTypeOf(AppModel.Location)">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PhotoPerson" TypeName="AppModel.PhotoPerson" StoreEntitySet="PhotoPerson">
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="PhotoId" ColumnName="Photos_PhotoId" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonId" ColumnName="People_PersonId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

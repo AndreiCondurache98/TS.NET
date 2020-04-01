@@ -1,0 +1,11 @@
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\MyPhotosCore.dll.config
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\MyPhotosCore.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\MyPhotosCore.pdb
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\EntityFramework.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\EntityFramework.SqlServer.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\EntityFramework.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\EntityFramework.SqlServer.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.csprojAssemblyReference.cache
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.csproj.CopyComplete
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.pdb

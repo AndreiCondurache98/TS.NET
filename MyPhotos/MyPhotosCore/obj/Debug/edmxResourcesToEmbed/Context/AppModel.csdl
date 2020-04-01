@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AppModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="AppModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Photos" EntityType="AppModel.Photo" />
+    <EntitySet Name="People" EntityType="AppModel.Person" />
+    <AssociationSet Name="PhotoPerson" Association="AppModel.PhotoPerson">
+      <End Role="Photo" EntitySet="Photos" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <EntitySet Name="Locations" EntityType="AppModel.Location" />
+    <AssociationSet Name="LocationPhoto" Association="AppModel.LocationPhoto">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Photo" EntitySet="Photos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="PhotoId" />
+    </Key>
+    <Property Name="PhotoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" />
+    <Property Name="Event" Type="String" Nullable="false" MaxLength="30" />
+    <Property Name="FilePath" Type="String" Nullable="false" />
+    <NavigationProperty Name="People" Relationship="AppModel.PhotoPerson" FromRole="Photo" ToRole="Person" />
+    <NavigationProperty Name="Location" Relationship="AppModel.LocationPhoto" FromRole="Photo" ToRole="Location" />
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="15" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="15" />
+    <NavigationProperty Name="Photos" Relationship="AppModel.PhotoPerson" FromRole="Person" ToRole="Photo" />
+  </EntityType>
+  <Association Name="PhotoPerson">
+    <End Type="AppModel.Photo" Role="Photo" Multiplicity="*" />
+    <End Type="AppModel.Person" Role="Person" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Photos" Relationship="AppModel.LocationPhoto" FromRole="Location" ToRole="Photo" />
+  </EntityType>
+  <Association Name="LocationPhoto">
+    <End Type="AppModel.Location" Role="Location" Multiplicity="1" />
+    <End Type="AppModel.Photo" Role="Photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
