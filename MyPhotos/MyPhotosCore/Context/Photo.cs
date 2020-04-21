@@ -38,7 +38,7 @@ namespace MyPhotosCore.Context
 
         [DataMember]
         public int LocationId { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [DataMember]
         public virtual ICollection<Person> People { get; set; }

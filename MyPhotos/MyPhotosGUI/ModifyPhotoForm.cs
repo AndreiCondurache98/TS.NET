@@ -85,7 +85,7 @@ namespace MyPhotosGUI
                     FirstName = FirstNameTextBox.Text,
                     LastName = LastNameTextBox.Text
                 };
-                _personRepository.AddPerson(person);
+               // _personRepository.AddPerson(person);
                 _photoRepository.AddPersonToPhoto(person, imageSelected);
                 PersonComboBox.Items.Add(person.FirstName + " " + person.LastName);
             }

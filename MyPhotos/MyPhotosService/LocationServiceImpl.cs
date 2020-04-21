@@ -1,10 +1,6 @@
 ﻿using MyPhotosCore.Context;
 using MyPhotosCore.Repository.LocationRepository;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyPhotosService
 {
@@ -15,7 +11,6 @@ namespace MyPhotosService
 
         public LocationServiceImpl()
         {
-
         }
         public List<Location> GetLocations()
         {

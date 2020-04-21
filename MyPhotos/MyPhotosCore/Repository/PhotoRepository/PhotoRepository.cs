@@ -1,6 +1,7 @@
 ﻿using MyPhotosCore.Context;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 
 namespace MyPhotosCore.Repository.PhotoRepository
 {
@@ -40,13 +41,20 @@ namespace MyPhotosCore.Repository.PhotoRepository
         {
             var photo = _context.Photos.FirstOrDefault(p => p.PhotoId == photoId);
             if (!VerifyPhotoExists(photo)) return;
-            
-            foreach(var person in photo.People)
+
+            var peopleInPhoto = from person in _context.People
+                                where person.Photos.Any(p => p.PhotoId == photoId)
+                                select person;
+
+            foreach (var person in peopleInPhoto)
             {
                 person.Photos.Remove(photo);
             }
+
+            var photoToDetele = _context.Photos.Include(x => x.People).First();
+
             _context.Photos.Remove(photo);
-            _context.SaveChanges();      
+            _context.SaveChanges();
         }
 
         public List<Photo> GetPhotosOfPerson(Person person)
@@ -69,7 +77,23 @@ namespace MyPhotosCore.Repository.PhotoRepository
         {
             var photoFound = _context.Photos.FirstOrDefault(ph => ph.PhotoId == photo.PhotoId);
             var personFound = _context.People.FirstOrDefault(p => p.PersonId == person.PersonId);
-            photoFound.People.Add(personFound);
+
+            if (personFound != null)
+            {
+                if (photoFound.People == null)
+                {
+                    photoFound.People = new List<Person>();
+                }
+                photoFound.People.Add(personFound);
+            }
+            else
+            {
+                if(photoFound.People == null)
+                {
+                    photoFound.People = new List<Person>();
+                }
+                photoFound.People.Add(person);
+            }
             _context.SaveChanges();
         }
 
@@ -86,10 +110,17 @@ namespace MyPhotosCore.Repository.PhotoRepository
         public void UpdateLocationOfPhoto(int photoId, Location location)
         {
             Photo photoFound = _context.Photos.FirstOrDefault(p => p.PhotoId == photoId);
-            
-            photoFound.Location = location;
-            photoFound.LocationId = location.LocationId;
-            
+            Location locationFound = _context.Locations.FirstOrDefault(l => l.LocationId == location.LocationId);
+
+            if (locationFound == null)
+            {
+                photoFound.Location = location;
+                photoFound.LocationId = location.LocationId;
+            }
+            else
+            {
+                photoFound.LocationId = location.LocationId;
+            }
             _context.SaveChanges();
         }
 

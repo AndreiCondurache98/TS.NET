@@ -122,11 +122,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyPhotosCore\MyPhotosCore.csproj">
-      <Project>{436336C8-2B0F-4182-AA4B-5EFCC762B876}</Project>
+      <Project>{436336c8-2b0f-4182-aa4b-5efcc762b876}</Project>
       <Name>MyPhotosCore</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
