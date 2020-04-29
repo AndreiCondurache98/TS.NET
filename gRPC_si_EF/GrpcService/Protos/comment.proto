@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Protos";
+
+service RemoteComment{
+	rpc AddComment (CommentModel) returns (Reply1);
+	rpc GetCommentById (CommentLookupModel) returns (CommentModel);
+}
+
+// The request message
+message CommentLookupModel{
+	int32 commentId = 1;
+}
+
+// The response message
+message CommentModel{
+	int32 commentId = 1;
+	string text = 2;
+}
+
+message Reply1 {
+	string result = 1;
+	bool isOk = 2;
+}

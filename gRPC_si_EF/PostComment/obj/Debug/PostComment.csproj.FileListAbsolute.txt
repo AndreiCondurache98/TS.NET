@@ -1,0 +1,11 @@
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\PostComment.dll.config
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\PostComment.dll
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\PostComment.pdb
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\EntityFramework.dll
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\EntityFramework.xml
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\obj\Debug\PostComment.dll
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\obj\Debug\PostComment.pdb
+E:\CURSURI\AN 3\TSP.NET\gRPC_si_EF\PostComment\obj\Debug\PostComment.csproj.CoreCompileInputs.cache
