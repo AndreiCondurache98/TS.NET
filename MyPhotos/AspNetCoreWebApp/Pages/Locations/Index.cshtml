@@ -1,0 +1,42 @@
+﻿@page
+@model AspNetCoreWebApp.Pages.Locations.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Location</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].LocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Locations[0].Photos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Locations)
+        {
+            <tr style="font-size:small">
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Photos.Count)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

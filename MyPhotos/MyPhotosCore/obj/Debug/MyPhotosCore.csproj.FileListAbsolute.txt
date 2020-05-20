@@ -11,3 +11,4 @@ E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.dll
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.pdb
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\System.Data.SqlClient.dll
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\bin\Debug\System.Data.SqlClient.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosCore\obj\Debug\MyPhotosCore.csproj.CoreCompileInputs.cache

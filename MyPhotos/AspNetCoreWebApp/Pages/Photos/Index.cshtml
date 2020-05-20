@@ -1,0 +1,87 @@
+﻿@page
+@model AspNetCoreWebApp.Pages.Photos.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form>
+    <p>
+        Choose name of Location:
+        <select asp-for="LocationName" asp-items="Model.Names">
+            <option value="">All</option>
+        </select>
+    </p>
+    <p>
+        Choose Year:
+        <select asp-for="Year" asp-items="Model.Years">
+            <option value="">All</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].PhotoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].LocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].FilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photos[0].People)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Photos)
+        {
+        <tr style="font-size:small">
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.People.Count)
+            </td>
+            <td>
+                <a asp-page="/People/List" asp-route-id="@item.PhotoId">Tagged people</a>
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+<p>Number of images found: @Model.Photos.Count</p>

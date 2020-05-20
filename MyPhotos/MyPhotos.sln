@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotosHost", "MyPhotosHos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotosClient", "MyPhotosClient\MyPhotosClient.csproj", "{516930D5-2515-4DD6-A8E4-BCCF0E6ED36C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreWebApp", "AspNetCoreWebApp\AspNetCoreWebApp.csproj", "{BD7F1A1D-2714-4B3C-9210-36ABB24F4C11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{516930D5-2515-4DD6-A8E4-BCCF0E6ED36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{516930D5-2515-4DD6-A8E4-BCCF0E6ED36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{516930D5-2515-4DD6-A8E4-BCCF0E6ED36C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7F1A1D-2714-4B3C-9210-36ABB24F4C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7F1A1D-2714-4B3C-9210-36ABB24F4C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7F1A1D-2714-4B3C-9210-36ABB24F4C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7F1A1D-2714-4B3C-9210-36ABB24F4C11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

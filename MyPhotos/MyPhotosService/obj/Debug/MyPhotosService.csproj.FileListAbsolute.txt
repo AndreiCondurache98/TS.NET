@@ -14,3 +14,4 @@ E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.SqlSe
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.SqlServer.xml
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\System.Data.SqlClient.dll
 E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\System.Data.SqlClient.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.csproj.CoreCompileInputs.cache
