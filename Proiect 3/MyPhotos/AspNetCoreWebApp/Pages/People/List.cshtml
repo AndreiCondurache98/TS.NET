@@ -1,0 +1,45 @@
+﻿@page
+@model AspNetCoreWebApp.Pages.People.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h3>Tagged people in photo with id: @ViewData["Photo"]</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.People[0].PersonId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.People[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.People[0].LastName)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.People)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-page="/Photos/Index">Back to List</a>
+</div>
+

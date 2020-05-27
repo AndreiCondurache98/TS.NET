@@ -1,0 +1,17 @@
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosService.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosService.pdb
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosCore.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosCore.pdb
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosCore.dll.config
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.csprojAssemblyReference.cache
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.csproj.CopyComplete
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.pdb
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\MyPhotosService.dll.config
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.SqlServer.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\EntityFramework.SqlServer.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\System.Data.SqlClient.dll
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\bin\Debug\System.Data.SqlClient.xml
+E:\CURSURI\AN 3\TSP.NET\MyPhotos\MyPhotosService\obj\Debug\MyPhotosService.csproj.CoreCompileInputs.cache
